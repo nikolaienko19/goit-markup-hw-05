@@ -146,7 +146,6 @@ button {
 }
 
 .contacts-link {
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -907,6 +906,7 @@ button {
 .modal-tick-checkbox {
     width: 16px;
     height: 16px;
+    margin-right: 8px;
 
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
@@ -917,9 +917,15 @@ button {
     justify-content: center;
     fill: transparent;
 
+    
+
 }
 
-.form-checkbox:checked+.modal-agreement .modal-tick-checkbox{
+.form-checkbox:focus + .modal-agreement .modal-tick-checkbox {
+    border-color: var(--secondary-accent-color);
+}
+
+.form-checkbox:checked + .modal-agreement .modal-tick-checkbox{
     border: none;
     background-color: var(--secondary-accent-color);
     fill: var(--secondary-white-color);
