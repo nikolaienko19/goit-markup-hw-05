@@ -858,7 +858,7 @@ button {
     fill: var(--primary-accent-color);
 }
 
-.modal-comment-container {
+.comment-container {
     margin-bottom: 16px;
 }
 
