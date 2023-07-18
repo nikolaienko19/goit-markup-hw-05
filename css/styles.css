@@ -679,7 +679,7 @@ button {
 
 .email-button {
     padding: 8px 24px;
-    min-width:: 165px;
+    min-width: 165px;
     height: 40px;
 
     display: flex;
@@ -787,40 +787,53 @@ button {
 }
 
 .modal-caption {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 
-
+    color: var(--secondary-black-color);
     text-align: center;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
+}
+
+.modal-form-container {
+    margin-bottom: 8px;
 }
 
 .modal-label {
-    position: relative;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
 .modal-label-text {
     display: block;
     margin-bottom: 4px;
 
-    color: #8E8F99;
+    color: var(--grey);
     font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.48px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.modal-input-container {
+    position: relative;
 }
 
 .modal-input {
 
-    width: 360px;
+    width: 100%;
     height: 40px;
-    padding: 11px 38px;
+    padding-left: 38px;
 
     border-radius: 4px;
-    border: 1px solid var(--secondary-black-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     outline: transparent;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -833,7 +846,8 @@ button {
 .modal-input-icon {
     position: absolute;
     left: 16px;
-    bottom: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     
     fill: var(--secondary-black-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -844,17 +858,25 @@ button {
     fill: var(--primary-accent-color);
 }
 
+.modal-comment-container {
+    margin-bottom: 16px;
+}
+
 .modal-form-comment {
     width: 100%;
     height: 120px;
     padding: 8px 16px;
+    resize: none;
 
+    color: rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    border: 1px solid var(--secondary-black-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     outline: transparent;
+
     font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.48px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -866,22 +888,23 @@ button {
     border-color: var(--primary-accent-color);
 }
 
+.checkbox-container {
+    margin-bottom: 24px;
+}
+
 .modal-agreement {
     display: flex;
     align-items: center;
     gap: 8px;
 
     font-size: 12px;
-    line-height: 1.16px;
-    letter-spacing: 0.48px;
-    color: #8E8F99;
-
-    margin-top: 8px;
-    margin-bottom: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--grey);
 }
 
 .modal-custom-checkbox {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
@@ -889,18 +912,17 @@ button {
     height: 16px;
 
     border-radius: 2px;
-    border: 1px solid var(--secondary-black-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox-icon {
-    fill: var(--primary-white-color);
-}
 
 .modal-checkbox:checked+.modal-custom-checkbox {
-    border-color: var(--secondary-accent-color);
+    border: none;
     background-color: var(--secondary-accent-color);
+    fill: var(--secondary-white-color);
 }
 
 .modal-agreement-link {
@@ -909,9 +931,10 @@ button {
 }
 
 .modal-button-submit {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     
+    display: block;
     padding: 16px 32px;
     align-items: center;
     margin-left: 95px;
@@ -926,11 +949,10 @@ button {
     border-radius: 4px;
     background: var(--primary-accent-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-submit:hover,
 .modal-button-submit:focus {
     background-color: var(--secondary-accent-color);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
